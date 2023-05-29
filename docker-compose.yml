@@ -1,0 +1,9 @@
+services:
+  ffmpeg-test:
+    build: .
+    image: ffmpeg-test:latest
+    container_name: ffmpeg-test
+    volumes:
+      - ./mount:/workspace/mount
+    devices:
+      - /dev/video0:/dev/video0
